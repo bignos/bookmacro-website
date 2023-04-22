@@ -1,0 +1,17 @@
+{
+    "devDependencies": {
+        "http-server": "^14.1.1",
+        "tailwindcss": "^3.3.1"
+    },
+    "dependencies": {
+        "animate.css": "^4.1.1"
+    },
+    "scripts": {
+        "build": "npm run build:copy_index & npm run build:copy_favicon & npm run build:copy_animatecss & npm run build:build_css",
+        "build:copy_index": "cp src/index.html public/index.html",
+        "build:copy_favicon": "cp src/favicon.ico public/favicon.ico",
+        "build:copy_animatecss": "cp node_modules/animate.css/animate.min.css public/css/",
+        "build:build_css": "npx tailwindcss --input src/css/tailwind.css --output public/css/style.css --minify",
+        "serve": "npx http-server public/ -p 3133"
+    }
+}
