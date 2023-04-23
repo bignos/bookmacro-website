@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title></title>
+    <title>BookMacro</title>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link href="css/style.css" rel="stylesheet" />
@@ -10,7 +10,69 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
 
-  <body>
-    <h1 class="text-5xl font-bold">BookMacro</h1>
+  <body class="bg-tokyonight-bg flex flex-col h-screen">
+    <header class="h-10">
+      <nav class="w-full bg-tokyonight-header shadow shadow-sky-700/40">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-5 py-2"
+        >
+          <div id="navbar" class="w-full">
+            <ul
+              class="flex justify-between text-tokyonight-reference text-base"
+            >
+              <li class="hover:text-tokyonight-highlight">[ HOME ]</li>
+              <li class="hover:text-tokyonight-highlight">[ DOCUMENTATION ]</li>
+              <li class="hover:text-tokyonight-highlight">[ ABOUT ]</li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <div id="title" class="py-7">
+      <h1
+        class="text-6xl md:text-9xl text-tokyonight-title text-center font-bold animate__animated animate__backInLeft"
+      >
+        BookMacro
+      </h1>
+      <p
+        class="text-2xl text-center text-tokyonight-string animate__animated animate__swing animate__delay-1s"
+      >
+        Save your Magic
+      </p>
+    </div>
+    <div id="content" class="max-w-screen-xl w-full items-center mx-auto px-5">
+      <section class="w-full">
+        <h2
+          class="text-3xl text-tokyonight-section-title font-bold underline underline-offset-4 py-2"
+        >
+          What is BookMacro ?
+        </h2>
+        <p class="text-lg text-tokyonight-text">
+          BookMacro is a plugin for
+          <a
+            href="https://neovim.io/"
+            class="text-tokyonight-highlight hover:underline"
+            >Neovim</a
+          >
+          that allows to save, run or share macros
+        </p>
+      </section>
+    </div>
+    <div id="blank" class="mb-auto"></div>
+    <footer class="h-10">
+      <nav class="w-full bg-tokyonight-footer shadow-inner shadow-sky-700/40">
+        <div
+          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-5 py-2"
+        >
+          <ul
+            class="w-full flex justify-between text-tokyonight-reference text-base"
+          >
+            <li class="hover:text-tokyonight-highlight">[ HOME ]</li>
+            <li class="hover:text-tokyonight-highlight">[ DOCUMENTATION ]</li>
+            <li class="hover:text-tokyonight-highlight">[ ABOUT ]</li>
+          </ul>
+        </div>
+      </nav>
+    </footer>
   </body>
 </html>
