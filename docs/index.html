@@ -11,23 +11,7 @@
   </head>
 
   <body class="bg-tokyonight-bg flex flex-col h-screen">
-    <header class="h-10">
-      <nav class="w-full bg-tokyonight-header shadow shadow-sky-700/40">
-        <div
-          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-5 py-2"
-        >
-          <div id="navbar" class="w-full">
-            <ul
-              class="flex justify-between text-tokyonight-reference text-base"
-            >
-              <li class="hover:text-tokyonight-highlight">[ HOME ]</li>
-              <li class="hover:text-tokyonight-highlight">[ DOCUMENTATION ]</li>
-              <li class="hover:text-tokyonight-highlight">[ ABOUT ]</li>
-            </ul>
-          </div>
-        </div>
-      </nav>
-    </header>
+    <div data-include="inc/header.html"></div>
     <div id="title" class="py-7">
       <h1
         class="text-6xl md:text-9xl text-tokyonight-title text-center font-bold animate__animated animate__backInLeft"
@@ -58,21 +42,7 @@
         </p>
       </section>
     </div>
-    <div id="blank" class="mb-auto"></div>
-    <footer class="h-10">
-      <nav class="w-full bg-tokyonight-footer shadow-inner shadow-sky-700/40">
-        <div
-          class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-5 py-2"
-        >
-          <ul
-            class="w-full flex justify-between text-tokyonight-reference text-base"
-          >
-            <li class="hover:text-tokyonight-highlight">[ HOME ]</li>
-            <li class="hover:text-tokyonight-highlight">[ DOCUMENTATION ]</li>
-            <li class="hover:text-tokyonight-highlight">[ ABOUT ]</li>
-          </ul>
-        </div>
-      </nav>
-    </footer>
+    <div data-include="inc/footer.html"></div>
+    <script type="module" src="js/HTMLInclude.min.js"></script>
   </body>
 </html>
