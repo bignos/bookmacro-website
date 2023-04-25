@@ -27,7 +27,7 @@
     }
 
     .static-li-link:hover {
-        @apply text-tokyonight-highlight animate__animated animate__heartBeat animate__slower;
+        @apply text-tokyonight-highlight;
     }
 
     /* -[ Section ]- */
