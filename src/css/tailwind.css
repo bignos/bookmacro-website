@@ -1,4 +1,50 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "animate.css/animate.css";
+@import "tailwindcss/utilities";
+
+
+@layer components {
+    /* -[ Header / Footer ]- */
+    .static {
+        @apply h-10;
+    }
+
+    .static-nav-header {
+        @apply w-full bg-tokyonight-header shadow shadow-sky-700/40;
+    }
+
+    .static-nav-footer {
+        @apply w-full bg-tokyonight-footer shadow-inner shadow-sky-700/40;
+    }
+
+    .static-center-justify {
+        @apply max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-5 py-2;
+    }
+
+    .static-ul-justify {
+        @apply w-full flex justify-between text-tokyonight-reference text-base;
+    }
+
+    .static-li-link:hover {
+        @apply text-tokyonight-highlight animate__animated animate__heartBeat animate__slower;
+    }
+
+    /* -[ Section ]- */
+    .section {
+        @apply w-full py-1 md:py-5; 
+    }
+
+    .section-title {
+        @apply text-xl md:text-3xl text-tokyonight-section-title font-bold underline underline-offset-8 py-2;
+    }
+
+    .section-content {
+        @apply text-base md:text-lg text-tokyonight-text;
+    }
+
+    .section-content-link {
+        @apply text-tokyonight-highlight hover:underline
+    }
+}
 

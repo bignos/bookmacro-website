@@ -1,6 +1,8 @@
 {
     "devDependencies": {
+        "autoprefixer": "^10.4.14",
         "http-server": "^14.1.1",
+        "postcss-import": "^15.1.0",
         "tailwindcss": "^3.3.1"
     },
     "dependencies": {
@@ -8,22 +10,16 @@
     },
     "scripts": {
         "build": "npm run build:facade_copy_spc & npm run build:facade_copy_dir & npm run build:build_css",
-        "build:facade_copy_spc": "npm run build:copy_index & npm run build:copy_favicon & npm run build:copy_animatecss",
-        "build:facade_copy_dir": "npm run build:copy_js & npm run build:copy_inc & npm run build:copy_elm & npm run build:copy_content", 
-
-        
+        "build:facade_copy_spc": "npm run build:copy_index & npm run build:copy_favicon",
+        "build:facade_copy_dir": "npm run build:copy_js & npm run build:copy_inc & npm run build:copy_elm & npm run build:copy_content",
         "build:copy_index": "cp src/index.html docs/index.html",
         "build:copy_favicon": "cp src/favicon.ico docs/favicon.ico",
-        "build:copy_animatecss": "cp node_modules/animate.css/animate.min.css docs/css/",
-
         "build:copy_js": "cp -r src/js/*.js docs/js",
         "build:copy_inc": "cp -r src/inc/*.html docs/inc",
         "build:copy_elm": "cp -r src/elm/*.html docs/elm",
         "build:copy_content": "cp -r src/content/*.html docs/content",
-
-        "build:build_css": "npx tailwindcss --input src/css/tailwind.css --output docs/css/style.css --minify",
-
-
+        "build:build_css": "npx tailwindcss --postcss --input src/css/tailwind.css --output docs/css/style.css --minify",
+        "bserve": "npm run build && npm run serve",
         "serve": "npx http-server docs/ -p 3133"
     }
 }

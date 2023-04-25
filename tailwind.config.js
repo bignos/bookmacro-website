@@ -13,6 +13,7 @@ module.exports = {
         "tokyonight-string": "#9ece6a",
         "tokyonight-section-title": "#7aa2f7",
         "tokyonight-text": "#bfc9f3",
+        "tokyonight-text-highlight": "#b495ee",
       },
     },
   },
