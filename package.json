@@ -7,13 +7,23 @@
         "animate.css": "^4.1.1"
     },
     "scripts": {
-        "build": "npm run build:copy_index & npm run build:copy_favicon & npm run build:copy_js & npm run build:copy_inc & npm run build:copy_animatecss & npm run build:build_css",
+        "build": "npm run build:facade_copy_spc & npm run build:facade_copy_dir & npm run build:build_css",
+        "build:facade_copy_spc": "npm run build:copy_index & npm run build:copy_favicon & npm run build:copy_animatecss",
+        "build:facade_copy_dir": "npm run build:copy_js & npm run build:copy_inc & npm run build:copy_elm & npm run build:copy_content", 
+
+        
         "build:copy_index": "cp src/index.html docs/index.html",
         "build:copy_favicon": "cp src/favicon.ico docs/favicon.ico",
+        "build:copy_animatecss": "cp node_modules/animate.css/animate.min.css docs/css/",
+
         "build:copy_js": "cp -r src/js/*.js docs/js",
         "build:copy_inc": "cp -r src/inc/*.html docs/inc",
-        "build:copy_animatecss": "cp node_modules/animate.css/animate.min.css docs/css/",
+        "build:copy_elm": "cp -r src/elm/*.html docs/elm",
+        "build:copy_content": "cp -r src/content/*.html docs/content",
+
         "build:build_css": "npx tailwindcss --input src/css/tailwind.css --output docs/css/style.css --minify",
+
+
         "serve": "npx http-server docs/ -p 3133"
     }
 }

@@ -12,35 +12,9 @@
 
   <body class="bg-tokyonight-bg flex flex-col h-screen">
     <div data-include="inc/header.html"></div>
-    <div id="title" class="py-7">
-      <h1
-        class="text-6xl md:text-9xl text-tokyonight-title text-center font-bold animate__animated animate__backInLeft"
-      >
-        BookMacro
-      </h1>
-      <p
-        class="text-2xl text-center text-tokyonight-string animate__animated animate__swing animate__delay-1s"
-      >
-        Save your Magic
-      </p>
-    </div>
+    <div data-include="elm/title.html"></div>
     <div id="content" class="max-w-screen-xl w-full items-center mx-auto px-5">
-      <section class="w-full">
-        <h2
-          class="text-3xl text-tokyonight-section-title font-bold underline underline-offset-4 py-2"
-        >
-          What is BookMacro ?
-        </h2>
-        <p class="text-lg text-tokyonight-text">
-          BookMacro is a plugin for
-          <a
-            href="https://neovim.io/"
-            class="text-tokyonight-highlight hover:underline"
-            >Neovim</a
-          >
-          that allows to save, run or share macros
-        </p>
-      </section>
+      <div data-include="content/introduction.html"></div>
     </div>
     <div data-include="inc/footer.html"></div>
     <script type="module" src="js/HTMLInclude.min.js"></script>
